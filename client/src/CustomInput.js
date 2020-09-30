@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: 400,
+    border: '5px solid gray'
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -36,17 +37,9 @@ export default function CustomizedInputBase({ onChange }) {
       <InputBase
         onChange={onChange}
         className={classes.input}
-        placeholder="Search data..."
+        placeholder="Search data by value..."
         inputProps={{ "aria-label": "search data" }}
       />
-      <Divider className={classes.divider} orientation="vertical" />
-      <IconButton
-        color="primary"
-        className={classes.iconButton}
-        aria-label="directions"
-      >
-        <DirectionsIcon />
-      </IconButton>
     </Paper>
   );
 }
